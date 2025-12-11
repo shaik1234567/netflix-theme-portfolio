@@ -1,25 +1,13 @@
-// queries/getProfileBanner.ts
-import datoCMSClient from './datoCMSClient';
+// getProfileBanner.ts (STATIC MOCK)
 import { ProfileBanner } from '../types';
 
-const GET_PROFILE_BANNER = `
- {
-  profilebanner {
-    backgroundImage {
-      url
-    }
-    headline
-    resumeLink {
-      url
-    }
-    linkedinLink
-    profileSummary
-  }
-}
-`;
-
 export async function getProfileBanner(): Promise<ProfileBanner> {
-  const data = await datoCMSClient.request<{ profilebanner: ProfileBanner }>(GET_PROFILE_BANNER);
-  console.log("🚀 ~ getProfileBanner ~ data:", data)
-  return data.profilebanner;
+  // Return static mock data
+  return {
+    backgroundImage: { url: '/images/blue.png' },
+    headline: 'Shaik Shivaji - Software and AI/ML Engineer',
+    resumeLink: { url: 'https://drive.google.com/file/d/1FfZngs9JekoKCvJnb74KhXF2sCrCSui2/view?usp=sharing' },
+    linkedinLink: 'https://www.linkedin.com/in/shivaji-shaik-b92b19270/',
+    profileSummary: 'Passionate Software Developer specializing in AI/ML technologies with expertise in building scalable applications and intelligent systems.'
+  };
 }

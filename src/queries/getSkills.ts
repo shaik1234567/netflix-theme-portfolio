@@ -1,19 +1,13 @@
-// queries/getTimeline.ts
-import datoCMSClient from './datoCMSClient';
+// getSkills.ts (STATIC MOCK)
 import { Skill } from '../types';
 
-const GET_SKILLS = `
-{
-  allSkills(orderBy: category_ASC) {
-    name
-    category
-    description
-    icon
-  }
-}
-`;
-
 export async function getSkills(): Promise<Skill[]> {
-  const data = await datoCMSClient.request<{ allSkills: Skill[] }>(GET_SKILLS);
-  return data.allSkills;
+  // Return static mock data
+  return [
+    { name: 'React', category: 'Frontend', description: 'UI Library', icon: 'FaReact' },
+    { name: 'Node.js', category: 'Backend', description: 'JavaScript Runtime', icon: 'FaNodeJs' },
+    { name: 'Python', category: 'Backend', description: 'Programming Language', icon: 'FaPython' },
+    { name: 'AWS', category: 'Cloud & DevOps', description: 'Cloud Platform', icon: 'FaAws' }
+    // ...add more static skills as needed
+  ];
 }

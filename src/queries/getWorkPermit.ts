@@ -1,19 +1,12 @@
-// queries/getWorkPermit.ts
-import datoCMSClient from './datoCMSClient';
+// getWorkPermit.ts (STATIC MOCK)
 import { WorkPermit } from '../types';
 
-const GET_WORK_PERMIT = `
-  query {
-    workPermit {
-      visaStatus
-      expiryDate
-      summary
-      additionalInfo
-    }
-  }
-`;
-
 export async function getWorkPermit(): Promise<WorkPermit> {
-  const data = await datoCMSClient.request<{ workPermit: WorkPermit }>(GET_WORK_PERMIT);
-  return data.workPermit;
+  // Return static mock data
+  return {
+    visaStatus: 'Graduate Visa',
+    expiryDate: new Date('2027-12-31'),
+    summary: 'I am currently on a Graduate Visa in the UK.',
+    additionalInfo: 'My visa allows me to work and gain experience in the UK tech industry.'
+  };
 }
