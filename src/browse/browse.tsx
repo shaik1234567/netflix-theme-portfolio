@@ -24,7 +24,8 @@ const Browse: React.FC = () => {
     {
       name: "stalker",
       image: redImage,
-      backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc28yMjMyZmJ6eWtxbmNwdDV6cXk4dWZmcjFhZms2cXBjN2h5ZDJjeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QjZXUBUr89CkiWLPjL/giphy.gif" // Dark, abstract digital lights
+      backgroundGif: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemtzdHJvZGFsZWhweTRnYXRsdXBsMzlteXE4c3dsNzBueDhnNmJucSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GCjIE9C9Eb9V6/giphy.gif" // Dark, abstract digital lights
+//https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc28yMjMyZmJ6eWtxbmNwdDV6cXk4dWZmcjFhZms2cXBjN2h5ZDJjeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QjZXUBUr89CkiWLPjL/giphy.gif   
     },
     {
       name: "adventurer",

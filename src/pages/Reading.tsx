@@ -5,8 +5,8 @@ import './Reading.css';
 import atomicHabits from '../images/atomic_habits.jpg';
 import richDadPoorDad from '../images/rich_dad_poor_dad.jpg';
 import alchemist from '../images/alchemist.jpg';
-import eatThatFrog from '../images/eat_that_frog.jpg';
-import vijayanikiAidhuMetlu from '../images/vijayaniki_aidu_metlu.jpg';
+import theCurseOfLettingGo from '../images/love 1.jpg';
+import thinkOutsideTheBox from '../images/outside box.jpg';
 import venneloAdapilla from '../images/vennelo_adapilla.jpeg';
 
 const books = [
@@ -29,16 +29,16 @@ const books = [
     description: "A magical journey of following one's dreams.",
   },
   {
-    title: "Eat That Frog",
-    author: "Brian Tracy",
-    imgSrc: eatThatFrog,
-    description: "A motivational book on overcoming procrastination.",
+    title: "The Curse of Letting Go",
+    author: "", 
+    imgSrc: theCurseOfLettingGo,
+    description: "A book that teaches the importance of letting go and moving on.",
   },
   {
-    title: "Vijayaniki Aidhu Metlu",
-    author: "Yandamoori Veerendranath",
-    imgSrc: vijayanikiAidhuMetlu,
-    description: "An inspirational Telugu book for personal growth.",
+    title: "Think Outside The Box",
+    author: "",
+    imgSrc: thinkOutsideTheBox,
+    description: "An Inspirational book for personal growth and thinking outside the box.",
   },
   {
     title: "Vennelo Adapilla",

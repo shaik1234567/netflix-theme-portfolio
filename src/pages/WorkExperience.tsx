@@ -1,37 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { MdOutlineWork as WorkIcon } from 'react-icons/md';
 import { IoSchool as SchoolIcon } from 'react-icons/io5';
 import { FaStar as StarIcon } from 'react-icons/fa';
 import './WorkExperience.css';
-import { TimelineItem } from '../types';
-import { getTimeline } from '../queries/getTimeline';
 
+// Hardcoded timeline data
+const timelineData = [
+  {
+    timelineType: "work",
+    title: "Open Source Contributor",
+    name: "GitHub",
+    dateRange: "2025 - Present",
+    techStack: "Documentation, API Design, Best Practices",
+    summaryPoints: "Enhanced project documentation by restructuring README with comprehensive usage instructions, API references, and coding standards to improve onboarding experience for new developers."
+  },
+  {
+    timelineType: "education",
+    title: "🎓 Bachelor's Degree",
+    name: "Indian Institute of Information Technology Kottayam",
+    dateRange: "2022 - 2026",
+    summaryPoints: "Pursuing Bachelor's degree in Computer Science and Engineering with focus on Software Development and AI/ML"
+  },
+  // Add more timeline items here as needed
+];
 
 const WorkExperience: React.FC = () => {
-
-  const [timeLineData, setTimeLineData] = useState<TimelineItem[] | null>(null);
-
-  useEffect(() => {
-    async function fetchTimelineItem() {
-      const data = await getTimeline();
-      setTimeLineData(data);
-    }
-    fetchTimelineItem();
-  }, []);
-
-
-  if (!timeLineData) return <div>Loading...</div>;
-  console.log("🚀 ~ timeLineData:", timeLineData)
-
   return (
     <>
       <div className="timeline-container">
         <h2 className="timeline-title">📅 Work Experience & Education Timeline</h2>
       </div>
       <VerticalTimeline>
-        {timeLineData.map((item, index) => (
+        {timelineData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             className={`vertical-timeline-element--${item.timelineType}`}
@@ -40,7 +42,7 @@ const WorkExperience: React.FC = () => {
                 ? index === 0
                   ? { background: 'rgb(33, 150, 243)', color: '#fff' }
                   : { background: 'rgb(240, 240, 240)', color: '#fff' }
-                : { background: 'rgb(255, 224, 230)', color: '#fff' } // Lighter red for education
+                : { background: 'rgb(255, 224, 230)', color: '#fff' }
             }
             contentArrowStyle={
               item.timelineType === "work"
@@ -51,7 +53,7 @@ const WorkExperience: React.FC = () => {
             iconStyle={
               item.timelineType === "work"
                 ? { background: 'rgb(33, 150, 243)', color: '#fff' }
-                : { background: 'rgb(255, 160, 200)', color: '#fff' } // Softer red for education icon
+                : { background: 'rgb(255, 160, 200)', color: '#fff' }
             }
             icon={item.timelineType === "work" ? <WorkIcon /> : <SchoolIcon />}
           >
@@ -81,3 +83,4 @@ const WorkExperience: React.FC = () => {
 };
 
 export default WorkExperience;
+

@@ -4,25 +4,25 @@ import { FaMedium, FaDev } from 'react-icons/fa';
 
 const blogs = [
   {
-    title: "Make Your Rails Console Look Better",
+    title: "My Journey in Full Stack Development",
     platform: "Medium",
     icon: <FaMedium />,
-    link: "https://medium.com/@chintusamala96/make-your-rails-console-look-better-510988d40566",
-    description: "Learn tips to customize your Rails console for a better experience.",
+    link: "https://github.com/shaik1234567",
+    description: "Exploring the world of full stack development and sharing my experiences.",
   },
   {
-    title: "Docker Fundas - My Version",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@chintusamala96/docker-fundas-my-version-7b9262bd90d4",
-    description: "An introductory guide to Docker fundamentals from my perspective.",
-  },
-  {
-    title: "Grape Gem in Ruby on Rails: Handling User Model and API Endpoint",
+    title: "Building Modern Web Applications",
     platform: "Dev.to",
     icon: <FaDev />,
-    link: "https://dev.to/samalasumanth0262/grape-gem-in-ruby-on-rails-handling-user-model-and-api-endpoint-g6d",
-    description: "A guide to using the Grape gem for API development in Ruby on Rails.",
+    link: "https://github.com/shaik1234567",
+    description: "Tips and tricks for creating responsive and scalable web applications.",
+  },
+  {
+    title: "Learning React and Beyond",
+    platform: "Medium",
+    icon: <FaMedium />,
+    link: "https://github.com/shaik1234567",
+    description: "A comprehensive guide to mastering React and modern JavaScript frameworks.",
   },
 ];
 

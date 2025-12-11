@@ -41,7 +41,8 @@
 .banner-description {
   font-size: 1rem;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .banner-buttons {
@@ -79,6 +80,7 @@
   .banner-content {
     max-width: 100%;
   }
+
   .profile-banner {
     padding: 60px 20px;
     align-items: center;
@@ -92,7 +94,7 @@
 
   .banner-description {
     line-height: 1.5;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   /* Button adjustments */
@@ -108,4 +110,3 @@
     font-size: 0.9rem;
   }
 }
-

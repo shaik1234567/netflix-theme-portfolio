@@ -11,49 +11,60 @@
   align-items: center;
   justify-content: center;
   background: #222;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 40px 50px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   color: #e6e6e6;
-  max-width: 350px;
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin-badge-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.4);
 }
 
 .badge-avatar {
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-right: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-right: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  border: 3px solid #e50914;
 }
 
 .badge-content {
   text-align: left;
+  flex: 1;
 }
 
 .badge-name {
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 8px 0;
   color: #fff;
 }
 
 .badge-title {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #aaa;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  color: #e50914;
+  font-weight: 500;
 }
 
 .badge-description {
-  font-size: 0.85rem;
-  margin: 5px 0;
+  font-size: 1rem;
+  margin: 10px 0;
   color: #ccc;
+  line-height: 1.5;
 }
 
 .badge-company {
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 15px;
 }
 
 .badge-link {
@@ -61,61 +72,68 @@
   align-items: center;
   background-color: #0077b5;
   color: #fff;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
   text-decoration: none;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 119, 181, 0.3);
 }
 
 .badge-link:hover {
   background-color: #005983;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 119, 181, 0.5);
 }
 
 .linkedin-icon {
-  margin-right: 5px;
+  margin-right: 8px;
+  font-size: 1.2rem;
 }
 
 .contact-header p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #ccc;
-  margin: 20px 0 30px;
+  margin: 30px 0 40px;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   background: #1e1e1e;
-  padding: 10px 20px;
-  border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 18px 35px;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  min-width: 350px;
 }
 
 .contact-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(214, 43, 43, 0.6);
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.6);
 }
 
 .contact-icon {
-  font-size: 1.5rem;
-  color: #d62b2b;
+  font-size: 2rem;
+  color: #e50914;
 }
 
 .contact-link {
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-link:hover {
@@ -123,30 +141,38 @@
 }
 
 .contact-fun {
-  margin-top: 30px;
-  font-size: 1.2rem;
+  margin-top: 40px;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   color: #e6e6e6;
 }
 
 .coffee-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff9900;
   animation: swing 1s infinite ease-in-out;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes swing {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(30deg);
   }

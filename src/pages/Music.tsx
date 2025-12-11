@@ -4,7 +4,7 @@ import albumCover1 from '../images/Hotelcalifornia.jpg'; // Hotel California by 
 import albumCover2 from '../images/ac-dc.jpg'; // Back in Black by AC/DC
 import albumCover3 from '../images/guns-n-roses.webp'; // Appetite for Destruction by Guns N' Roses
 
-const favoriteGenres = ["Rock", "Classic Rock", "Hard Rock", "Blues", "Alternative"];
+const favoriteGenres = ["Love", "90's RAP", "Telugu Songs", "Instrumental", "DJ Mix beats"];
 const favoriteAlbums = [
   { title: "Hotel California", artist: "The Eagles", imgSrc: albumCover1 },
   { title: "Back in Black", artist: "AC/DC", imgSrc: albumCover2 },

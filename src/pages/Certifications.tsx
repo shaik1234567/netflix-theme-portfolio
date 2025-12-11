@@ -1,33 +1,77 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Certifications.css';
-import { FaExternalLinkAlt, FaUniversity } from 'react-icons/fa';
-import { SiUdemy, SiCoursera, SiIeee } from 'react-icons/si';
+import { FaExternalLinkAlt, FaUniversity, FaCertificate } from 'react-icons/fa';
+import { SiUdemy, SiCoursera, SiIeee, SiHackerrank, SiMicrosoft } from 'react-icons/si';
 import { Certification } from '../types';
-import { getCertifications } from '../queries/getCertifications';
+
 const iconData: { [key: string]: JSX.Element } = {
   'udemy': <SiUdemy />,
   'coursera': <SiCoursera />,
   'ieee': <SiIeee />,
-  'university': <FaUniversity />
-}
+  'hackerrank': <SiHackerrank />,
+  'university': <FaUniversity />,
+  'certificate': <FaCertificate />,
+  'microsoft': <SiMicrosoft />,
+  'unstop': <FaCertificate />,
+  'istudio': <FaUniversity />
+};
 
 const Certifications: React.FC = () => {
 
-  const [certifications, setCertifications] = useState<Certification[]>([]);
+  const [certifications] = useState<Certification[]>([
+    {
+      title: "Cognitive Class Certification",
+      issuer: "Cognitive Class",
+      issuedDate: "2024",
+      link: "https://courses.cognitiveclass.ai/certificates/c1e9b63e8e8244f5b9de0c06516e682a",
 
-  useEffect(() => { 
-    async function fetchCertifications() {
-      const data = await getCertifications();
-      setCertifications(data);
+      iconName: "microsoft"
+    },
+    {
+      title: "Machine learning",
+      issuer: "Istudio",
+      issuedDate: "2024",
+      link: "https://drive.google.com/file/d/1_OtRQXSAxgXbnJUntYVRR4vzVRNj9Jqf/view",
+
+      iconName: "istudio"
+    },
+    {
+      title: "Java (Basic)",
+      issuer: "HackerRank",
+      issuedDate: "2024",
+      link: "https://www.hackerrank.com/certificates/5ebad1b7c49d",
+
+      iconName: "hackerrank"
+    },
+    {
+      title: "CSS (Basic)",
+      issuer: "HackerRank",
+      issuedDate: "2024",
+      link: "https://www.hackerrank.com/certificates/cbcdc9c3063f",
+
+      iconName: "hackerrank"
+    },
+    {
+      title: "NHAI Participation",
+      issuer: "UNSTOP",
+      issuedDate: "2024",
+      link: "https://drive.google.com/file/d/1DG4AVkOQqzcQjUF3gXerO0FgZCA2RLKf/view?usp=sharing",
+
+      iconName: "unstop"
+    },
+    {
+      title: "HP POWERLAB Participation",
+      issuer: "UNSTOP",
+      issuedDate: "2025",
+      link: "https://drive.google.com/file/d/17BxanwFq6qYS-xGPXwn5HqpoHTruGCji/view?usp=sharing",
+
+      iconName: "unstop"
     }
-
-    fetchCertifications();
-  }, []);
-
-  if (certifications.length === 0) return <div>Loading...</div>;
+  ]);
 
   return (
     <div className="certifications-container">
+      <h2 className="certifications-title">Certifications</h2>
       <div className="certifications-grid">
         {certifications.map((cert, index) => (
           <a href={cert.link} key={index} target="_blank" rel="noopener noreferrer" className="certification-card" style={{ '--delay': `${index * 0.2}s` } as React.CSSProperties}>
