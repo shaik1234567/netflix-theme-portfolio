@@ -8,7 +8,7 @@ const ProfileBanner: React.FC = () => {
   const bannerData = {
     headline: "Shaik Shivaji - Software and AI/ML Engineer",
     profileSummary: "Passionate Software Developer specializing in AI/ML technologies with expertise in building scalable applications and intelligent systems. Experienced in full-stack development, machine learning model deployment, and creating innovative solutions that bridge the gap between traditional Software Developering and artificial intelligence. Committed to leveraging cutting-edge technologies to solve complex problems and deliver impactful results. Strong collaborator with proven ability to work effectively in cross-functional teams, translating business requirements into robust technical solutions. Continuously learning and adapting to emerging technologies in the rapidly evolving AI/ML landscape.",
-    resumeLink: "https://drive.google.com/file/d/1FfZngs9JekoKCvJnb74KhXF2sCrCSui2/view?usp=sharing",
+    resumeLink: "https://drive.google.com/file/d/1twBK6xO0DcNr2SOb8aDUDkJA8NUU9w0r/view?usp=sharing",
     linkedinLink: "https://www.linkedin.com/in/shivaji-shaik-b92b19270/"
   };
 
